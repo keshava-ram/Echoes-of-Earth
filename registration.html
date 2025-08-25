@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+    body {
+      background-image: url("scene.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .div-bar {
+      background-color: black;
+      position:relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 2px wheat;
+    }
+    #home {
+        width: 60px;
+        height: 55px;
+    }
+    #animals {
+        margin-left: 50px;
+        background-color: transparent;
+        border: none;
+        color:darkorange ;
+    }
+    #animals-text {
+        font-size: 25px;
+    }
+    #about {
+        margin-left: 30px;
+        background-color: transparent;
+        border: none;
+        color:darkorange ;
+    }
+    #about-text {
+        font-size: 25px;
+    }
+    #sign {
+        margin-left: 830px;
+        background-color: transparent;
+        border: none;
+        color:darkorange ;
+    }
+    #sign-text {
+        font-size: 25px;
+    }
+    #quote {
+      position: absolute;
+      left: 45%;
+      top: 8%;
+      font-size: 250%;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: ivory;
+    }
+    .reg-form {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      width: 30%;
+      background: rgba(255,255,255,0.4);
+      border-radius: 15px;
+    }
+    #heading {
+      padding-top: 1%;
+      padding-bottom: 1%;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size: 35px;
+      text-align: center;
+    }
+    .inner {
+      text-align: left;
+      margin-left: 2%;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 20px;
+    }
+    input {
+      width: 95%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      margin-top: 5px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #paw {
+      width: 50%;
+    }
+    #submit {
+      position: absolute;
+      top: 82%;
+      left: 44%;
+      color: black;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .div-bar, #quote, .reg-form {
+      animation: fadeIn 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="div-bar">
+    <a href="main.html"><img src="home.png" alt="" id="home"></a>
+    <a href="endangered.html"><button id="animals"><p id="animals-text">Endangered animals</p></button></a>
+    <a href="about us.html"><button id="about"><p id="about-text">About us</p></button></a>
+    <a href="contact-us.html"><button id="sign"><p id="sign-text">Contact us</p></button></a>
+  </div>
+  <div>
+    <p id="quote">
+      "Wildlife doesn’t need us to survive; <br>it needs us to stop destroying what helps it thrive."
+    </p>
+    <div class="reg-form">
+        <h2 id="heading">Register</h2>
+        <div class="inner">
+          <label>Full name: </label><br>
+          <input type="text" name="name" placeholder="Enter you name"><br><br>
+          <label>Phone number:</label><br>
+          <input type="tel" name="number" placeholder="Enter your phone number" pattern="[0-9]{10}" title="Enter 10 digits only" required><br><br>
+          <label>E-mail address:</label><br>  
+          <input type="text" name="email" placeholder="Enter your email address"><br><br>
+          <a href="signed-up.html" target="_blank"><center><img src="paw.png" id="paw"></center>
+          <b><p id="submit">Submit</p></a>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

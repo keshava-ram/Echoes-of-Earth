@@ -1,0 +1,165 @@
+body {
+    background-image:url("ele.jpg");
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-attachment: scroll;
+    animation: fadeInUp 1s ease forwards;
+}
+.div-bar {
+    background-color: black;
+    position:relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 5%;
+    border-radius: 10px;
+}
+#home {
+    width: 60px;
+    height: 55px;
+}
+#animals {
+    background-color: transparent;
+    border: none;
+    color:darkorange ;
+}
+#animals-text {
+    font-size: 25px;
+}
+#about {
+    background-color: transparent;
+    border: none;
+    color:darkorange ;
+}
+#about-text {
+    font-size: 25px;
+}
+#sign {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color:darkorange ;
+}
+#sign-text {
+    font-size: 25px;
+}
+#reg {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color:darkorange ;
+}
+#regist {
+    font-size: 25px;
+}
+#echoes {
+    margin-top: 200px;
+    font-size: 90px;
+    margin-left: 10px;
+    text-shadow: 2px 2px 2px black;
+    color: darkorange;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.main-content {
+    margin-top: 430px;
+    background-size: cover; 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:antiquewhite;
+}
+#heading {
+    font-size: 35px;
+}
+.first-content {
+    width: auto;
+    margin-left: 30px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+#deer {
+    width: 20%;
+    margin-left: auto;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+#wild {
+    width: 20%;
+    border-radius: 100px;
+    margin-right: 50px;
+}
+.content-second {
+    width: 95%;
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 25px;
+    display: flex;
+}
+#second {
+    text-align: justify;
+    margin-top: 50px;
+}
+#donate {
+    font-size: 30px;
+    border-radius: 10px;
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 90px;
+    height: 50px;
+    background-color: #6B8E23;
+    font-family: monospace;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#echoes {
+    animation: fadeInUp 1.2s ease-out;
+}
+
+#heading, #first, #second {
+    animation: fadeInUp 1.5s ease-out;
+}
+
+#deer, #wild {
+    animation: zoomIn 1.2s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+#deer:hover, #wild:hover {
+    transform: scale(1.1);
+}
+
+#donate {
+    animation: fadeInUp 1.5s ease-out;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#donate:hover {
+    background-color: #556B2F;
+    transform: scale(1.05);
+}

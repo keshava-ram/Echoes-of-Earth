@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Donation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'segoe UI', sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    .container {
+      position: relative;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        font-family: "Arial Black", cursive, sans-serif;
+        text-align: center;
+        color: #222;
+        margin-bottom: 25px;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        transition: border-color 0.3s, box-sadow 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #32a136;
+      box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+      outline: none;
+    }
+    button{
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      height: 40px;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+
+    button:hover {
+      background-color: #217e26;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transfrom: translateY(0);
+        }
+    }
+
+    @media (max-width: 575px) {
+      .container {
+        width: 90%;
+        padding: 20px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      label {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Donation</h2>
+    <form onsubmit="return savePaymentMethod()" action="paid.html" method="get">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="phone">Mobile Number</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number" required />
+
+      <label for="email">Email ID</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="payment">Payment Methods</label>
+      <select id="payment" name="payment" required>
+        <option value="">--select payment method--</option>
+        <option value="credit-card">Credit Card</option>
+        <option value="debit-card">Debit Card</option>
+        <option value="net-banking">Net Banking</option>
+      </select>
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="4" placeholder="why are you Donating?" required></textarea>
+
+      <button type="submit">Confirm</button>
+    </form>
+  </div>
+  <script>
+    function savePaymentMethod() {
+    const method = document.getElementById("payment").value;
+    localStorage.setItem("selectedPayment", method);
+    return true; // go to next page
+    }
+  </script>
+</body>
+</html>
